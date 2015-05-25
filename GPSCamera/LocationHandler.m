@@ -46,6 +46,7 @@ static LocationHandler *DefaultManager = nil;
                               fromLocation:newLocation];
         
     }
+    
 }
 
 @end

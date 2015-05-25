@@ -11,7 +11,7 @@
 
 #import <Foundation/Foundation.h>
 #import <CoreLocation/CoreLocation.h>
-
+#endif
 @protocol LocationHandlerDelegate <NSObject>
 
 @required
@@ -30,4 +30,4 @@
 -(void) stopUpdating;
 
 @end
-#endif
+
