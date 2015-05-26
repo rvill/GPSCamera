@@ -18,7 +18,6 @@
 		CDEAC7C81B1378FB00B14507 /* GPSCameraTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CDEAC7C71B1378FB00B14507 /* GPSCameraTests.m */; };
 		CDEAC7D21B13794800B14507 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CDEAC7D11B13794800B14507 /* CoreLocation.framework */; };
 		CDEAC7D41B137AF800B14507 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CDEAC7D31B137AF800B14507 /* Foundation.framework */; };
-		CDEAC7D61B137AFF00B14507 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CDEAC7D51B137AFF00B14507 /* CoreData.framework */; };
 		CDEAC7D81B137B0900B14507 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CDEAC7D71B137B0800B14507 /* CoreGraphics.framework */; };
 		CDEAC7DB1B13965B00B14507 /* LocationHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = CDEAC7DA1B13965B00B14507 /* LocationHandler.m */; };
 /* End PBXBuildFile section */
@@ -64,7 +63,6 @@
 			files = (
 				CDD9E1691B13FDC200D6C59F /* MobileCoreServices.framework in Frameworks */,
 				CDEAC7D81B137B0900B14507 /* CoreGraphics.framework in Frameworks */,
-				CDEAC7D61B137AFF00B14507 /* CoreData.framework in Frameworks */,
 				CDEAC7D41B137AF800B14507 /* Foundation.framework in Frameworks */,
 				CDEAC7D21B13794800B14507 /* CoreLocation.framework in Frameworks */,
 			);

@@ -44,13 +44,12 @@
                                 </items>
                             </toolbar>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="A9J-kW-Zxu">
-                                <rect key="frame" x="0.0" y="28" width="600" height="444"/>
+                                <rect key="frame" x="0.0" y="34" width="600" height="355"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <connections>
-                        <outlet property="imageView" destination="A9J-kW-Zxu" id="gMu-Mu-nnT"/>
                         <outlet property="latitudeLabel" destination="kR7-aQ-GI9" id="Ihg-hk-u9v"/>
                         <outlet property="longitudeLabel" destination="tnp-sP-OOV" id="1NG-oH-bxb"/>
                     </connections>
