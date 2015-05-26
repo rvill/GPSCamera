@@ -13,6 +13,7 @@
 {
     IBOutlet UILabel *latitudeLabel;
     IBOutlet UILabel *longitudeLabel;
+    IBOutlet UILabel *accuracyLabel;
 }
 @property BOOL newMedia;
 - (IBAction)useCamera:(id)sender;

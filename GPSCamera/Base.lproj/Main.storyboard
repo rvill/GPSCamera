@@ -47,10 +47,17 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6zx-24-Ryx">
                                 <rect key="frame" x="0.0" y="28" width="321" height="456"/>
                             </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="accuracyLabel" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U6C-66-fgi">
+                                <rect key="frame" x="144" y="483" width="112" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <connections>
+                        <outlet property="accuracyLabel" destination="U6C-66-fgi" id="sAE-tW-V8d"/>
                         <outlet property="imageView" destination="6zx-24-Ryx" id="3xT-pl-vbL"/>
                         <outlet property="latitudeLabel" destination="kR7-aQ-GI9" id="Ihg-hk-u9v"/>
                         <outlet property="longitudeLabel" destination="tnp-sP-OOV" id="1NG-oH-bxb"/>

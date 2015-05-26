@@ -18,7 +18,7 @@
 //#define kDistanceFilter 1 //25m, will not return a new position unless its 1m away, 1m between each point
 #define kHeadingFilter 0
 //these two used when refining the results further
-#define kAccuracyFilter 1 //50m
+#define kAccuracyFilter 20 //50m
 #define kTimeFilter 0.2 //0.2 seconds
 
 @implementation ViewController
@@ -67,10 +67,12 @@
     {
         
        // [self.delegate waypoint:newLocation];
-       // [latitudeLabel setText:[NSString stringWithFormat:
-                            //    @"Latitude: %f",newLocation.coordinate.latitude]];
-       // [longitudeLabel setText:[NSString stringWithFormat:
-                             //    @"Longitude: %f",newLocation.coordinate.longitude]];
+        [latitudeLabel setText:[NSString stringWithFormat:
+                                @"Lat: %f",newLocation.coordinate.latitude]];
+        [longitudeLabel setText:[NSString stringWithFormat:
+                                 @"Long: %f",newLocation.coordinate.longitude]];
+        [accuracyLabel setText:[NSString stringWithFormat:@"Ac: %f", newLocation.horizontalAccuracy]];
+         [self startUpdates];
 
     } else {
         NSLog(@"Waypoint discarded. Accuracy : %f, Age : %f", newLocation.horizontalAccuracy, timeSince);
@@ -82,16 +84,17 @@
     if (timeSince > 5)
     {
         //use the waypoint ..
-      //  [latitudeLabel setText:[NSString stringWithFormat:
-                            //    @"Latitude: %f",newLocation.coordinate.latitude]];
-       // [longitudeLabel setText:[NSString stringWithFormat:
-                             //    @"Longitude: %f",newLocation.coordinate.longitude]];
-
+        [latitudeLabel setText:[NSString stringWithFormat:
+                               @"Latitude: %f",newLocation.coordinate.latitude]];
+        [longitudeLabel setText:[NSString stringWithFormat:
+                                 @"Longitude: %f",newLocation.coordinate.longitude]];
+        [accuracyLabel setText:[NSString stringWithFormat:@"Accuracy: %f", newLocation.horizontalAccuracy]];
+        //test
+         NSLog(@"timesince > 5. Accuracy : %f, Age : %f", newLocation.horizontalAccuracy, timeSince);
+       [self startUpdates];
     } else {
         NSLog(@"Not 5s since previous so not adding");
     }
-    
-
 }
 
 /*- (void) locationManager:(CLLocationManager *)manager didUpdateLocations:(NSArray *)locations {
@@ -101,7 +104,7 @@
     NSLog(@"%",[locations lastObject]);
 }*/
 
--(void)didUpdateToLocation:(CLLocation *)newLocation
+/*-(void)didUpdateToLocation:(CLLocation *)newLocation
               fromLocation:(CLLocation *)oldLocation{
     
     
@@ -115,7 +118,7 @@
             @"Latitude: %f",newLocation.coordinate.latitude]];
          [longitudeLabel setText:[NSString stringWithFormat:
             @"Longitude: %f",newLocation.coordinate.longitude]];
-        
+          [self startUpdates];
     } else {
         NSLog(@"Waypoint discarded. Accuracy : %f, Age : %f", newLocation.horizontalAccuracy, timeSince);
     }
@@ -130,7 +133,8 @@
             @"Latitude: %f",newLocation.coordinate.latitude]];
          [longitudeLabel setText:[NSString stringWithFormat:
             @"Longitude: %f",newLocation.coordinate.longitude]];
-        
+      
+          //[self startUpdates];
     } else {
         NSLog(@"Not 5s since previous so not adding");
     }
@@ -145,13 +149,15 @@
    
     
     
-}
+//}
 
 //to call to start and stop getting GPS from the receiver
 - (void) startUpdates
 {
+    self.locationManager.activityType = CLActivityTypeFitness;
     [self.locationManager startUpdatingLocation];
     [self.locationManager startUpdatingHeading];
+    
 }
 
 - (void) stopUpdates

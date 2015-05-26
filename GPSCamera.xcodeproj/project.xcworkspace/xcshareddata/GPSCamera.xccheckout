@@ -7,20 +7,16 @@
 	<key>IDESourceControlProjectIdentifier</key>
 	<string>369F7545-A95A-4B36-A5A7-91B6750E81E3</string>
 	<key>IDESourceControlProjectName</key>
-	<string>GPSCamera</string>
+	<string>project</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
-		<key>AB1F1154D45C165F0EEB101BB9C6CCDB12ABB473</key>
-		<string>https://github.com/rvill/GPSCamera.git</string>
 		<key>AD2C5B9CB2BF2D2B7AC174BBA00D9CD6AD01A66B</key>
 		<string>https://github.com/rvill/GPSCamera.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>GPSCamera.xcodeproj</string>
+	<string>GPSCamera.xcodeproj/project.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
-		<key>AB1F1154D45C165F0EEB101BB9C6CCDB12ABB473</key>
-		<string>../../../GPSCamera</string>
 		<key>AD2C5B9CB2BF2D2B7AC174BBA00D9CD6AD01A66B</key>
 		<string>../..</string>
 	</dict>
@@ -32,14 +28,6 @@
 	<string>AD2C5B9CB2BF2D2B7AC174BBA00D9CD6AD01A66B</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
-		<dict>
-			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
-			<string>public.vcs.git</string>
-			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>AB1F1154D45C165F0EEB101BB9C6CCDB12ABB473</string>
-			<key>IDESourceControlWCCName</key>
-			<string>GPSCamera</string>
-		</dict>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>
