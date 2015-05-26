@@ -18,7 +18,7 @@
 //#define kDistanceFilter 1 //25m, will not return a new position unless its 1m away, 1m between each point
 #define kHeadingFilter 0
 //these two used when refining the results further
-#define kAccuracyFilter 5 //10m, 20m, 50m
+#define kAccuracyFilter 10 //10m, 20m, 50m
 #define kTimeFilter 0.2 //0.2 seconds
 
 @implementation ViewController

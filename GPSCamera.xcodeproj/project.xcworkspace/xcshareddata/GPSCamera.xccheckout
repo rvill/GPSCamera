@@ -7,14 +7,14 @@
 	<key>IDESourceControlProjectIdentifier</key>
 	<string>369F7545-A95A-4B36-A5A7-91B6750E81E3</string>
 	<key>IDESourceControlProjectName</key>
-	<string>project</string>
+	<string>GPSCamera</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
 		<key>AD2C5B9CB2BF2D2B7AC174BBA00D9CD6AD01A66B</key>
 		<string>https://github.com/rvill/GPSCamera.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>GPSCamera.xcodeproj/project.xcworkspace</string>
+	<string>GPSCamera.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>AD2C5B9CB2BF2D2B7AC174BBA00D9CD6AD01A66B</key>
