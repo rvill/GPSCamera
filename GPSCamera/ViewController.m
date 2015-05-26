@@ -18,7 +18,7 @@
 //#define kDistanceFilter 1 //25m, will not return a new position unless its 1m away, 1m between each point
 #define kHeadingFilter 0
 //these two used when refining the results further
-#define kAccuracyFilter 20 //50m
+#define kAccuracyFilter 5 //10m, 20m, 50m
 #define kTimeFilter 0.2 //0.2 seconds
 
 @implementation ViewController
@@ -91,10 +91,45 @@
         [accuracyLabel setText:[NSString stringWithFormat:@"Accuracy: %f", newLocation.horizontalAccuracy]];
         //test
          NSLog(@"timesince > 5. Accuracy : %f, Age : %f", newLocation.horizontalAccuracy, timeSince);
+      
+  
        [self startUpdates];
     } else {
         NSLog(@"Not 5s since previous so not adding");
     }
+}
+
+
+//Get Averaged locations
+- (CLLocation *) averageLocations: (NSArray *) loci
+{
+    double tempLat=0,tempLong=0,tempAlt=0,tempAccH=0,tempAccV=0,tempCourse=0,tempSpeed=0,tempTime=0;
+    for (CLLocation *loc in loci)
+    {
+        tempLat += loc.coordinate.latitude;
+        tempLong += loc.coordinate.longitude;
+        tempAlt += loc.altitude;
+        tempAccH += loc.horizontalAccuracy;
+        tempAccV += loc.verticalAccuracy;
+        tempCourse += loc.course;
+        tempSpeed += loc.speed;
+        tempTime += loc.timestamp.timeIntervalSinceReferenceDate;
+    }
+    
+    double ratio = (double) loci.count;
+    CLLocationCoordinate2D tempCoord = CLLocationCoordinate2DMake(tempLat/ratio, tempLong/ratio);
+    NSDate *tempDate = [[NSDate alloc] initWithTimeIntervalSinceReferenceDate:tempTime/ratio];
+    
+    CLLocation *temp = [[CLLocation alloc] initWithCoordinate:tempCoord
+                                                     altitude:tempAlt/ratio
+                                           horizontalAccuracy:tempAccH/ratio
+                                             verticalAccuracy:tempAccV/ratio
+                                                       course:tempCourse/ratio
+                                                        speed:tempSpeed/ratio
+                                                    timestamp:tempDate];
+    NSLog(@"temp %@", temp);
+    
+    return temp;
 }
 
 /*- (void) locationManager:(CLLocationManager *)manager didUpdateLocations:(NSArray *)locations {

@@ -32,7 +32,7 @@ static LocationHandler *DefaultManager = nil;
 
 -(void)startUpdating{
     [locationManager startUpdatingLocation];
-}
+   }
 
 -(void) stopUpdating{
     [locationManager stopUpdatingLocation];
