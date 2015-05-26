@@ -36,7 +36,7 @@
                                             <action selector="useCamera:" destination="BYZ-38-t0r" id="08d-pn-MGf"/>
                                         </connections>
                                     </barButtonItem>
-                                    <barButtonItem title="Camera Roll" id="QK0-WD-GcB">
+                                    <barButtonItem title="Camera Roll" width="143" id="QK0-WD-GcB">
                                         <connections>
                                             <action selector="useCameraRoll:" destination="BYZ-38-t0r" id="GeQ-9H-TGA"/>
                                         </connections>
@@ -45,7 +45,7 @@
                                 </items>
                             </toolbar>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6zx-24-Ryx">
-                                <rect key="frame" x="0.0" y="28" width="529" height="456"/>
+                                <rect key="frame" x="0.0" y="28" width="321" height="456"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
