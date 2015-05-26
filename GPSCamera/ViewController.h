@@ -9,11 +9,16 @@
 #import <UIKit/UIKit.h>
 #import "LocationHandler.h"
 
-@interface ViewController : UIViewController<LocationHandlerDelegate>
+@interface ViewController : UIViewController<LocationHandlerDelegate,UIImagePickerControllerDelegate,UINavigationControllerDelegate>
 {
     IBOutlet UILabel *latitudeLabel;
     IBOutlet UILabel *longitudeLabel;
 }
+@property BOOL newMedia;
+@property (strong,nonatomic) IBOutlet UIImageView *imageView;
+- (IBAction)useCamera:(id)sender;
+- (IBAction)useCameraRoll:(id)sender;
+
 @end
 
 

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CDD9E1691B13FDC200D6C59F /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CDD9E1681B13FDC200D6C59F /* MobileCoreServices.framework */; };
 		CDEAC7AB1B1378FB00B14507 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CDEAC7AA1B1378FB00B14507 /* main.m */; };
 		CDEAC7AE1B1378FB00B14507 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CDEAC7AD1B1378FB00B14507 /* AppDelegate.m */; };
 		CDEAC7B11B1378FB00B14507 /* GPSCamera.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = CDEAC7AF1B1378FB00B14507 /* GPSCamera.xcdatamodeld */; };
@@ -33,6 +34,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		CDD9E1681B13FDC200D6C59F /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
 		CDEAC7A51B1378FB00B14507 /* GPSCamera.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GPSCamera.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CDEAC7A91B1378FB00B14507 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CDEAC7AA1B1378FB00B14507 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -60,6 +62,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CDD9E1691B13FDC200D6C59F /* MobileCoreServices.framework in Frameworks */,
 				CDEAC7D81B137B0900B14507 /* CoreGraphics.framework in Frameworks */,
 				CDEAC7D61B137AFF00B14507 /* CoreData.framework in Frameworks */,
 				CDEAC7D41B137AF800B14507 /* Foundation.framework in Frameworks */,
@@ -80,6 +83,7 @@
 		CDEAC79C1B1378FB00B14507 = {
 			isa = PBXGroup;
 			children = (
+				CDD9E1681B13FDC200D6C59F /* MobileCoreServices.framework */,
 				CDEAC7D71B137B0800B14507 /* CoreGraphics.framework */,
 				CDEAC7D51B137AFF00B14507 /* CoreData.framework */,
 				CDEAC7D31B137AF800B14507 /* Foundation.framework */,

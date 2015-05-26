@@ -14,7 +14,7 @@
 @end
 
 //first two used in setting up the CLLocationManager
-#define kDistanceFilter 1 //25m, will not return a new position unless its 1m away, 1m between each point
+//#define kDistanceFilter 1 //25m, will not return a new position unless its 1m away, 1m between each point
 #define kHeadingFilter 0
 //these two used when refining the results further
 #define kAccuracyFilter 1 //50m
@@ -29,7 +29,7 @@
     self.locationManager.delegate = self;
     //add
     self.locationManager.desiredAccuracy = kCLLocationAccuracyBest;//kCLLocationAccuracyBestForNavigation;
-    self.locationManager.distanceFilter = kDistanceFilter;
+   // self.locationManager.distanceFilter = kDistanceFilter;
     self.locationManager.headingFilter = kHeadingFilter;
     
     //end add
@@ -61,10 +61,16 @@
     
     //fix degrees of inaccurate signals, turn negative float to positive values.
     NSTimeInterval timeSince = fabs([newLocation.timestamp timeIntervalSinceNow]);
+    
     if ((newLocation.horizontalAccuracy < kAccuracyFilter) && (timeSince < kTimeFilter))
     {
         
        // [self.delegate waypoint:newLocation];
+       // [latitudeLabel setText:[NSString stringWithFormat:
+                            //    @"Latitude: %f",newLocation.coordinate.latitude]];
+       // [longitudeLabel setText:[NSString stringWithFormat:
+                             //    @"Longitude: %f",newLocation.coordinate.longitude]];
+
     } else {
         NSLog(@"Waypoint discarded. Accuracy : %f, Age : %f", newLocation.horizontalAccuracy, timeSince);
     }
@@ -75,10 +81,11 @@
     if (timeSince > 5)
     {
         //use the waypoint ..
-        [latitudeLabel setText:[NSString stringWithFormat:
-                                @"Latitude: %f",newLocation.coordinate.latitude]];
-        [longitudeLabel setText:[NSString stringWithFormat:
-                                 @"Longitude: %f",newLocation.coordinate.longitude]];
+      //  [latitudeLabel setText:[NSString stringWithFormat:
+                            //    @"Latitude: %f",newLocation.coordinate.latitude]];
+       // [longitudeLabel setText:[NSString stringWithFormat:
+                             //    @"Longitude: %f",newLocation.coordinate.longitude]];
+
     } else {
         NSLog(@"Not 5s since previous so not adding");
     }
@@ -93,17 +100,51 @@
     NSLog(@"%",[locations lastObject]);
 }*/
 
-/*-(void)didUpdateToLocation:(CLLocation *)newLocation
+-(void)didUpdateToLocation:(CLLocation *)newLocation
               fromLocation:(CLLocation *)oldLocation{
-    [latitudeLabel setText:[NSString stringWithFormat:
+    
+    
+    NSTimeInterval timeSince = fabs([newLocation.timestamp timeIntervalSinceNow]);
+    
+    if ((newLocation.horizontalAccuracy < kAccuracyFilter) && (timeSince < kTimeFilter))
+    {
+        
+        // [self.delegate waypoint:newLocation];
+         [latitudeLabel setText:[NSString stringWithFormat:
+            @"Latitude: %f",newLocation.coordinate.latitude]];
+         [longitudeLabel setText:[NSString stringWithFormat:
+            @"Longitude: %f",newLocation.coordinate.longitude]];
+        
+    } else {
+        NSLog(@"Waypoint discarded. Accuracy : %f, Age : %f", newLocation.horizontalAccuracy, timeSince);
+    }
+    NSDate *eventsDate = newLocation.timestamp;
+    NSTimeInterval eventinterval = [eventsDate timeIntervalSinceNow];
+    
+    //minimum of 5 seconds between points
+    if (timeSince > 5)
+    {
+        //use the waypoint ..
+          [latitudeLabel setText:[NSString stringWithFormat:
+            @"Latitude: %f",newLocation.coordinate.latitude]];
+         [longitudeLabel setText:[NSString stringWithFormat:
+            @"Longitude: %f",newLocation.coordinate.longitude]];
+        
+    } else {
+        NSLog(@"Not 5s since previous so not adding");
+    }
+
+    ///original from this method
+    
+   /* [latitudeLabel setText:[NSString stringWithFormat:
                             @"Latitude: %f",newLocation.coordinate.latitude]];
     [longitudeLabel setText:[NSString stringWithFormat:
                              @"Longitude: %f",newLocation.coordinate.longitude]];
-    NSLog(@"lat = %f, lon = %f",newLocation.coordinate.latitude, newLocation.coordinate.longitude);
+    NSLog(@"lat = %f, lon = %f",newLocation.coordinate.latitude, newLocation.coordinate.longitude);*/
    
     
     
-}*/
+}
 
 //to call to start and stop getting GPS from the receiver
 - (void) startUpdates
