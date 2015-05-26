@@ -15,9 +15,10 @@
     IBOutlet UILabel *longitudeLabel;
 }
 @property BOOL newMedia;
-@property (strong,nonatomic) IBOutlet UIImageView *imageView;
 - (IBAction)useCamera:(id)sender;
 - (IBAction)useCameraRoll:(id)sender;
+@property (strong,nonatomic) IBOutlet UIImageView *imageView;
+
 
 @end
 
