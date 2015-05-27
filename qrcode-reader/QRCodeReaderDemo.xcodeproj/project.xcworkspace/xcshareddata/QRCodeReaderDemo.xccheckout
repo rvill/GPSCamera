@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>B276CDF5-41AD-4749-8EAB-9A96403F2EAC</string>
+	<key>IDESourceControlProjectName</key>
+	<string>QRCodeReaderDemo</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>AD2C5B9CB2BF2D2B7AC174BBA00D9CD6AD01A66B</key>
+		<string>https://github.com/rvill/GPSCamera.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>qrcode-reader/QRCodeReaderDemo.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>AD2C5B9CB2BF2D2B7AC174BBA00D9CD6AD01A66B</key>
+		<string>../../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/rvill/GPSCamera.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>AD2C5B9CB2BF2D2B7AC174BBA00D9CD6AD01A66B</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>AD2C5B9CB2BF2D2B7AC174BBA00D9CD6AD01A66B</string>
+			<key>IDESourceControlWCCName</key>
+			<string>GPSCamera-master</string>
+		</dict>
+	</array>
+</dict>
+</plist>
